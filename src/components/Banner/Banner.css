@@ -1,0 +1,15 @@
+.banner-container{
+    background-image: url(../../atg-img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 500px;
+}
+.banner-text{
+    position: absolute;
+    width: 378px;
+    height: 47px;
+    left: 350px;
+    top: 350px;
+}
