@@ -11,6 +11,8 @@ import { GrView } from "react-icons/gr";
 import { MdShare, MdOutlineLocationOn } from "react-icons/md";
 import { GoPencil } from "react-icons/go";
 import { RiErrorWarningLine } from "react-icons/ri";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { Dropdown } from 'react-bootstrap';
 
 const Blogs = () => {
     return (
@@ -81,6 +83,18 @@ const Blogs = () => {
                             <h6>Meetup</h6>
                             <h5 class="card-title">What if famous brands had regular fonts? Meet RegulaBrands!</h5>
                             <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                            {/* dropdown menu will appear here */}
+                            <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <BiDotsHorizontalRounded />
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                             <button type="button" className="btn btn-link text-decoration-none border border-2 rounded-pill w-75 fw-bold text-primary">Apply on Timejobs</button>
                             <div className="row mt-3">
                                 <div className="d-flex align-items-center col-md-6">
