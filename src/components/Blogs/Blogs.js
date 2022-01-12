@@ -24,7 +24,20 @@ const Blogs = () => {
                         <div class="card-body">
                             <h6>Article</h6>
                             <h5 class="card-title">What if famous brands had regular fonts? Meet RegulaBrands!</h5>
-                            <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                        <BiDotsHorizontalRounded />
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             <div className="row">
                                 <div className="d-flex align-items-center col-md-6">
                                     <img className="img-fluid article-profile-img" src={img1} alt="" />
@@ -43,7 +56,20 @@ const Blogs = () => {
                         <div class="card-body">
                             <h6>Education</h6>
                             <h5 class="card-title">What if famous brands had regular fonts? Meet RegulaBrands!</h5>
-                            <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                        <BiDotsHorizontalRounded />
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             <div className="row">
                                 <div className="d-flex align-items-center col-md-6">
                                     <img className="img-fluid article-profile-img" src={img2} alt="" />
@@ -62,7 +88,20 @@ const Blogs = () => {
                         <div class="card-body">
                             <h6>Meetup</h6>
                             <h5 class="card-title">What if famous brands had regular fonts? Meet RegulaBrands!</h5>
-                            <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                        <BiDotsHorizontalRounded />
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             <button type="button" className="btn btn-link text-decoration-none border border-2 rounded-pill w-75 fw-bold text-danger">Visit Website</button>
                             <div className="row mt-3">
                                 <div className="d-flex align-items-center col-md-6">
@@ -82,19 +121,21 @@ const Blogs = () => {
                         <div class="card-body">
                             <h6>Meetup</h6>
                             <h5 class="card-title">What if famous brands had regular fonts? Meet RegulaBrands!</h5>
-                            <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
-                            {/* dropdown menu will appear here */}
-                            <Dropdown>
-                                <Dropdown.Toggle variant="light" id="dropdown-basic">
-                                    <BiDotsHorizontalRounded />
-                                </Dropdown.Toggle>
+                            <div className="d-flex align-items-center justify-content-between">
+                                <p class="card-text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                                {/* dropdown menu will appear here */}
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                        <BiDotsHorizontalRounded />
+                                    </Dropdown.Toggle>
 
-                                <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             <button type="button" className="btn btn-link text-decoration-none border border-2 rounded-pill w-75 fw-bold text-primary">Apply on Timejobs</button>
                             <div className="row mt-3">
                                 <div className="d-flex align-items-center col-md-6">
@@ -122,6 +163,7 @@ const Blogs = () => {
                     <div className="d-flex">
                         <span className="fs-5"><RiErrorWarningLine /></span>
                         <p className='px-2'>Your location will help us serve better and extend a personalised experience.</p>
+
                     </div>
                 </div>
             </div>
