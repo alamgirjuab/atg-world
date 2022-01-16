@@ -5,9 +5,11 @@ import { BsFacebook, BsGoogle } from "react-icons/bs";
 import loginImg from '../../atg-img/login-img.png';
 import { Alert, Modal } from 'react-bootstrap';
 import Login from '../Login/Login';
+import useFirebase from '../../hooks/useFirebase';
 
 
 const Register = () => {
+    const { user, signInUsingGoogle } = useFirebase();
     const [show, setShow] = useState(false);
 
     const handleClose1 = () => setShow(false);
@@ -28,7 +30,7 @@ const Register = () => {
                         <input type="password" aria-label="Password2" className="form-control border rounded-0" placeholder="Confirm Password" />
                         <button type="button" className="btn btn-link text-decoration-none bg-primary mt-3 rounded-pill w-100 fw-bold text-white">Create Account</button>
                         <button type="button" className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsFacebook /></span>Sign up with Facebook</button>
-                        <button type="button" className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsGoogle /></span>Sign up with Google</button>
+                        <button type="button" onClick={signInUsingGoogle} className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsGoogle /></span>Sign up with Google</button>
                     </div>
                 </div>
                 <div className="col-md-6">
