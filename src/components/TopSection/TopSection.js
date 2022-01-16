@@ -9,7 +9,7 @@ import './TopSection.css';
 
 const TopSection = () => {
     const { user, logOut } = useFirebase();
-    console.log(user);
+    // console.log(user);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -26,7 +26,7 @@ const TopSection = () => {
                 </div>
             </div>
             {
-                user.email ?
+                user?.email ?
                     <div className="col-md-4">
                         <img className="img-fluid rounded-circle img-size" src={user.photoURL} alt="" />
                         <button onClick={logOut} type="button" className="btn btn-link text-decoration-none fw-bold">{user.displayName}<IoMdArrowDropdown /></button>

@@ -9,29 +9,51 @@ import useFirebase from '../../hooks/useFirebase';
 
 
 const Register = () => {
-    const { user, signInUsingGoogle } = useFirebase();
+    const { user, signInUsingGoogle, registerUser, isLoading } = useFirebase();
     const [show, setShow] = useState(false);
+    const [loginData, setLoginData] = useState({});
 
     const handleClose1 = () => setShow(false);
     const handleShow1 = () => setShow(true);
+
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        console.log(field, value);
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData);
+    }
+
+    const handleLoginSubmit = e => {
+        if (loginData.password !== loginData.password2) {
+            alert('Your password did not match');
+            return
+        }
+        registerUser(loginData.email, loginData.password);
+        e.preventDefault();
+    }
     return (
         <div>
             <div className="row">
                 <div className="col-md-6">
                     <h4>Create Account</h4>
-                    <div className="my-4">
+                    {!isLoading && <form className="my-4" onSubmit={handleLoginSubmit}>
                         <div className="input-group">
                             {/* <span className="input-group-text">First and last name</span> */}
-                            <input type="text" aria-label="First name" className="form-control border rounded-0" placeholder="First Name" />
-                            <input type="text" aria-label="Last name" className="form-control border rounded-0" placeholder="Last Name" />
+                            <input type="text" onChange={handleOnChange} aria-label="First name" className="form-control border rounded-0" placeholder="First Name" />
+                            <input type="text" onChange={handleOnChange} aria-label="Last name" className="form-control border rounded-0" placeholder="Last Name" />
                         </div>
-                        <input type="email" aria-label="Email" className="form-control border rounded-0" placeholder="Email" />
-                        <span className="d-flex align-items-center bg-white border pe-3"><input type="password" aria-label="Password" className="form-control border-0 rounded-0" placeholder="Password" /><GrView /></span>
-                        <input type="password" aria-label="Password2" className="form-control border rounded-0" placeholder="Confirm Password" />
-                        <button type="button" className="btn btn-link text-decoration-none bg-primary mt-3 rounded-pill w-100 fw-bold text-white">Create Account</button>
+                        <input type="email" onChange={handleOnChange} aria-label="Email" name="email" className="form-control border rounded-0" placeholder="Email" />
+                        <span className="d-flex align-items-center bg-white border pe-3"><input type="password" name="password" onChange={handleOnChange} aria-label="Password" className="form-control border-0 rounded-0" placeholder="Password" /><GrView /></span>
+                        <input type="password" onChange={handleOnChange} aria-label="Password2" className="form-control border rounded-0" name="password2" placeholder="Confirm Password" />
+                        <button type="submit" className="btn btn-link text-decoration-none bg-primary mt-3 rounded-pill w-100 fw-bold text-white">Create Account</button>
                         <button type="button" className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsFacebook /></span>Sign up with Facebook</button>
                         <button type="button" onClick={signInUsingGoogle} className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsGoogle /></span>Sign up with Google</button>
-                    </div>
+                    </form>}
+                    {isLoading && <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>}
                 </div>
                 <div className="col-md-6">
                     <div className="d-flex align-items-center float-end">
