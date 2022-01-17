@@ -1,16 +1,27 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Banner from './components/Banner/Banner';
-import Blogs from './components/Blogs/Blogs';
-import Nav from './components/Nav/Nav';
+import AddBlog from './components/AddBlog/AddBlog';
+import DeleteBlog from './components/DeleteBlog/DeleteBlog';
+import Home from './components/Home/Home';
 import TopSection from './components/TopSection/TopSection';
 
 function App() {
   return (
     <div>
-      <TopSection />
-      <Banner />
-      <Nav />
-      <Blogs />
+      <Router>
+        <TopSection />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/addblog">
+            <AddBlog />
+          </Route>
+          <Route path="/deleteblog">
+            <DeleteBlog />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

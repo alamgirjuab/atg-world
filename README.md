@@ -8,6 +8,9 @@ This project was bootstrapped with (https://atg-world-32620.web.app/).
 •	Bootstrap v5</br>
 •	React Bootstrap</br>
 •	React Icons</br>
+•	React Router v5</br>
+•	React Hook Form</br>
+•	Axiosjs</br>
 •	Google Firebse Authentication Integrated</br>
 •	Google Login System is activated</br>
 •	Custom Email, Password Login System is activated</br>

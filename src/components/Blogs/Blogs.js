@@ -13,7 +13,7 @@ import { Dropdown } from 'react-bootstrap';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
-        fetch('blogs.json')
+        fetch('http://localhost:5000/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
@@ -22,8 +22,8 @@ const Blogs = () => {
             <div className="row mt-5">
                 <div className="col-md-9">
                     {
-                        blogs.map(blog => <div key={blog.id} className="card mb-3">
-                            <img src={blog.img} alt="" />
+                        blogs.map(blog => <div key={blog._id} className="card mb-3">
+                            <img src={blog.imgUrl} alt="" />
                             <div className="card-body">
                                 <h6>{blog.type}</h6>
                                 <h5 className="card-title">{blog.title}</h5>
@@ -43,8 +43,8 @@ const Blogs = () => {
                                 </div>
                                 <div className="row">
                                     <div className="d-flex align-items-center col-md-6">
-                                        <img className="img-fluid article-profile-img" src={blog.pro_img} alt="" />
-                                        <h5 className="ms-2">{blog.pro_name}</h5>
+                                        <img className="img-fluid article-profile-img" src={blog.photoUrl} alt="" />
+                                        <h5 className="ms-2">{blog.displayName}</h5>
                                     </div>
                                     <div className="d-flex align-items-center text-end col-md-6 ps-5">
                                         <GrView />

@@ -1,0 +1,12 @@
+.add-blog form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items: center;
+}
+
+.add-blog form input, textarea, select{
+    width: 30%;
+    margin-bottom: 5px;
+    padding: 5px;
+}
