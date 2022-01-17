@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "type": "Article",
+        "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+        "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "img": "https://i.ibb.co/Twzvbq0/article.jpg",
+        "pro_img": "https://i.ibb.co/cXDmK5b/sarthak-kamra.png",
+        "pro_name": "Shrthak Kamra"
+    },
+    {
+        "id": 2,
+        "type": "Education",
+        "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+        "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "img": "https://i.ibb.co/SrytRxG/education.jpg",
+        "pro_img": "https://i.ibb.co/ssLTwvR/sara-west.png",
+        "pro_name": "Sara West"
+    },
+    {
+        "id": 3,
+        "type": "Meetup",
+        "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+        "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei…",
+        "img": "https://i.ibb.co/hYFFTv9/meetup.jpg",
+        "pro_img": "https://i.ibb.co/0rWM0m1/ronal-jones.png",
+        "pro_name": "Ronal Jones"
+    }
+]

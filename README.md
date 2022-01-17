@@ -1,6 +1,6 @@
 # ATG-WORLD DOCUMENTATION
 
-This project was bootstrapped with (https://atg-world-react-website.netlify.app/).
+This project was bootstrapped with (https://atg-world-32620.web.app/).
 
 
 ### `Using Technology`
@@ -8,6 +8,10 @@ This project was bootstrapped with (https://atg-world-react-website.netlify.app/
 •	Bootstrap v5</br>
 •	React Bootstrap</br>
 •	React Icons</br>
+•	Google Firebse Authentication Integrated</br>
+•	Google Login System is activated</br>
+•	Custom Email, Password Login System is activated</br>
+•	Deployed to firebase hosting</br>
 
 ## NOTE:
-I could not finished the project and documentation video intime for my personal reason, but submitted whatever I have done yet. I will continue this project and if you visit this link above after 2 days, I hope it will fullfill according to your requirements. Thanks.
+I have implemented login system using both google and email, password system, but forget password api is developing yet. I hope it will fullfill according to your requirements. Thanks.
