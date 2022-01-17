@@ -1,12 +1,11 @@
 import axios from 'axios';
 import React from 'react';
-import { Placeholder } from 'react-bootstrap';
-import { useForm } from "react-hook-form";
+import { useForm, placeholder } from "react-hook-form";
 import useFirebase from '../../hooks/useFirebase';
 import './AddBlog.css';
 
 const AddBlog = () => {
-    const { user, logOut, registerUser } = useFirebase();
+    const { user, registerUser } = useFirebase();
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
