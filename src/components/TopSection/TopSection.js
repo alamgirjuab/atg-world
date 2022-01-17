@@ -8,8 +8,8 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import './TopSection.css';
 
 const TopSection = () => {
-    const { user, logOut } = useFirebase();
-    // console.log(user);
+    const { user, logOut, registerUser } = useFirebase();
+    // console.log(registerUser.email);
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);

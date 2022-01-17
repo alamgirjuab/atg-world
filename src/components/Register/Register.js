@@ -9,7 +9,7 @@ import useFirebase from '../../hooks/useFirebase';
 
 
 const Register = () => {
-    const { user, signInUsingGoogle, registerUser, isLoading } = useFirebase();
+    const { user, signInUsingGoogle, registerUser, isLoading, authError } = useFirebase();
     const [show, setShow] = useState(false);
     const [loginData, setLoginData] = useState({});
 
@@ -41,8 +41,8 @@ const Register = () => {
                     {!isLoading && <form className="my-4" onSubmit={handleLoginSubmit}>
                         <div className="input-group">
                             {/* <span className="input-group-text">First and last name</span> */}
-                            <input type="text" onChange={handleOnChange} aria-label="First name" className="form-control border rounded-0" placeholder="First Name" />
-                            <input type="text" onChange={handleOnChange} aria-label="Last name" className="form-control border rounded-0" placeholder="Last Name" />
+                            <input type="text" onChange={handleOnChange} aria-label="First name" name="First Name" className="form-control border rounded-0" placeholder="First Name" />
+                            <input type="text" onChange={handleOnChange} aria-label="Last name" name="Last Name" className="form-control border rounded-0" placeholder="Last Name" />
                         </div>
                         <input type="email" onChange={handleOnChange} aria-label="Email" name="email" className="form-control border rounded-0" placeholder="Email" />
                         <span className="d-flex align-items-center bg-white border pe-3"><input type="password" name="password" onChange={handleOnChange} aria-label="Password" className="form-control border-0 rounded-0" placeholder="Password" /><GrView /></span>
@@ -51,9 +51,24 @@ const Register = () => {
                         <button type="button" className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsFacebook /></span>Sign up with Facebook</button>
                         <button type="button" onClick={signInUsingGoogle} className="btn btn-link text-decoration-none border mt-3 w-100 fw-bold"><span className="me-2"><BsGoogle /></span>Sign up with Google</button>
                     </form>}
+
+                    {/* Show Spinner */}
+
                     {isLoading && <div class="spinner-border" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>}
+                    {/* Show Success Message */}
+                    {
+                        user?.email && <div class="alert alert-success" role="alert">
+                            Account Created Successfully!
+                        </div>
+                    }
+                    {/* Show Error Message */}
+                    {
+                        authError && <div class="alert alert-danger" role="alert">
+                            {authError}
+                        </div>
+                    }
                 </div>
                 <div className="col-md-6">
                     <div className="d-flex align-items-center float-end">
