@@ -11,7 +11,7 @@ const AddBlog = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/blogs', data)
+        axios.post('https://pure-cliffs-24002.herokuapp.com/blogs', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your blog post successfully')

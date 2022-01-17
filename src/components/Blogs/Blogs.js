@@ -13,7 +13,7 @@ import { Dropdown } from 'react-bootstrap';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://pure-cliffs-24002.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
