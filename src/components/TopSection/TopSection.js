@@ -16,7 +16,7 @@ const TopSection = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div className="row justify-content-between text-center py-3 d-flex justify-content-center">
+        <div className="row justify-content-between text-center py-3 d-flex justify-content-center row-cols-sm">
             <div className="col-md-4">
                 <NavLink to="/">
                     <img className="img-fluid w-25" src={logo} alt="" />
